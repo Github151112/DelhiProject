@@ -32,6 +32,14 @@ public class Flib {
 		
 	}
 	
+	public int getRowCount(String path,String sheetName) throws EncryptedDocumentException, IOException
+	{
+		FileInputStream f = new FileInputStream(path);
+		Workbook book = WorkbookFactory.create(f);
+		Sheet sheet = book.getSheet(sheetName);
+		return sheet.getLastRowNum();
+	}
+	
 	
 	
 }

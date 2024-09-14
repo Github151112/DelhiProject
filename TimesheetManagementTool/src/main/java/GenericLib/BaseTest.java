@@ -36,6 +36,7 @@ public class BaseTest implements IAutoConstant {
 		
 		Flib lib = new Flib();
 		String browser = lib.getDataFromPropertyFile(PROP_PATH, "browser");
+		Reporter.log("====Launching "+browser+" browser====",true);
 		String url = lib.getDataFromPropertyFile(PROP_PATH, "url");
 		if(browser.equals("chrome"))
 			driver = new ChromeDriver();
@@ -55,16 +56,17 @@ public class BaseTest implements IAutoConstant {
 	public void afterClass() {
 
 		driver.quit();
+		Reporter.log("closed the browser successfully",true);
 	}
 
 	@AfterTest
 	public void afterTest() {
-		Reporter.log("close the connection with database");
+		Reporter.log("close the connection with database",true);
 	}
 
 	@AfterSuite
 	public void afterSuite() {
-		Reporter.log("close the connection with server");
+		Reporter.log("close the connection with server",true);
 	}
 
 }

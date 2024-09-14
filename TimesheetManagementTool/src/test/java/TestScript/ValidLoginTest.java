@@ -9,7 +9,7 @@ import GenericLib.BaseTest;
 import GenericLib.Flib;
 import Pompages.LoginPage;
 
-public class LoginTest extends BaseTest {
+public class ValidLoginTest extends BaseTest {
 
 	@Test
 	public void login() throws EncryptedDocumentException, IOException {
