@@ -9,6 +9,7 @@ public interface IAutoConstant {
 	String SHEET_NAME = "LoginCred";
 	
 	String INVALID_SHEET ="InvalidData";
+	String USER_DATA = "UserData";
 	
 
 }

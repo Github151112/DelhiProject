@@ -18,5 +18,10 @@ public class HomePage extends BaseClass {
 	public WebElement getUserLink() {
 		return userLink;
 	}
+	
+	public void clickOnUserLink()
+	{
+		userLink.click();
+	}
 
 }
